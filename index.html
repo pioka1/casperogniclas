@@ -13,26 +13,25 @@
 <body class="bg-white text-slate-900">
 
   <nav class="nav-island flex justify-around md:justify-between items-center shadow-2xl">
-    <span class="whitespace-nowrap font-cursive text-md md:text-xl mr-2 md:mr-4">C & N</span>
+    <a href="#" class="hover:opacity-50">
+      <span class="whitespace-nowrap font-cursive text-md md:text-xl mr-2 md:mr-4">C & N</span>
+    </a>
 
-    <div class="flex justify-around w-full md:w-auto md:gap-8 items-center">
-      <a href="#home" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50 transition-opacity">
-        <i data-lucide="home" size="20"></i>
-        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Hjem</span>
-      </a>
-      <a href="#church" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+    <div class="relative flex justify-around w-full md:w-auto md:gap-8 items-center">
+      <div id="nav-pill" class="absolute bg-blue-500 rounded-full" style="transition: all 0.4s ease-in-out;"></div>
+      <a href="#church" class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
         <i data-lucide="church" size="20"></i>
         <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Kirke</span>
       </a>
-      <a href="#reception" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+      <a href="#reception" class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
         <i data-lucide="cake" size="20"></i>
         <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Reception</span>
       </a>
-      <a href="#dinner" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+      <a href="#dinner" class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
         <i data-lucide="utensils" size="20"></i>
         <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Middag</span>
       </a>
-      <a href="#party" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+      <a href="#party" class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
         <i data-lucide="music" size="20"></i>
         <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Fest</span>
       </a>
@@ -42,8 +41,8 @@
   <section id="home" class="relative overflow-hidden">
     <div class="hero-image flex items-center justify-center">
       <div class="text-center text-white p-6">
-        <h1 class="text-5xl md:text-8xl mb-4">Casper & Niclas' Wedding</h1>
-        <p class="uppercase tracking-[0.4em] text-sm opacity-80 italic">28. December 2025</p>
+        <h1 class="text-5xl md:text-8xl mb-4">Casper & Niclas' Bryllup</h1>
+        <p class="uppercase tracking-[0.4em] text-sm opacity-80 italic">15. August 2026</p>
       </div>
     </div>
   </section>
@@ -152,6 +151,7 @@ function updateNavPosition() {
 // Start the loop
 requestAnimationFrame(updateNavPosition);
   </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
