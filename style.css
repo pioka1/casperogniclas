@@ -264,3 +264,16 @@ h3 {
   color: rgba(255, 255, 255, 0.4);
   /* Lower opacity for the tagline */
 }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  /* 24px */
+}
+
+.section-header svg {
+  stroke: var(--primary-color);
+  width: 60px;
+  height: 60px;
+}
