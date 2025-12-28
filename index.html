@@ -1,26 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ÅÅÅÅÅÅHHHH nu skal der festes">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Casper og Niclas' Bryllup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Casper & Niclas' Bryllup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
-  <header>
-    <h1>Test</h1>
-  </header>
-  <main>
-    <p>Test.</p>
+<body class="bg-white text-slate-900">
+
+  <nav class="nav-island flex justify-around md:justify-between items-center shadow-2xl">
+    <span class="whitespace-nowrap font-cursive text-md md:text-xl mr-2 md:mr-4">C & N</span>
+
+    <div class="flex justify-around w-full md:w-auto md:gap-8 items-center">
+      <a href="#home" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50 transition-opacity">
+        <i data-lucide="home" size="20"></i>
+        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Hjem</span>
+      </a>
+      <a href="#church" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+        <i data-lucide="church" size="20"></i>
+        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Kirke</span>
+      </a>
+      <a href="#reception" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+        <i data-lucide="cake" size="20"></i>
+        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Reception</span>
+      </a>
+      <a href="#dinner" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+        <i data-lucide="utensils" size="20"></i>
+        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Middag</span>
+      </a>
+      <a href="#party" class="flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+        <i data-lucide="music" size="20"></i>
+        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Fest</span>
+      </a>
+    </div>
+  </nav>
+
+  <section id="home" class="relative overflow-hidden">
+    <div class="hero-image flex items-center justify-center">
+      <div class="text-center text-white p-6">
+        <h1 class="text-5xl md:text-8xl mb-4">Casper & Niclas' Wedding</h1>
+        <p class="uppercase tracking-[0.4em] text-sm opacity-80 italic">28. December 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="w-full">
+
+    <section id="church" class="full-section flex flex-row-reverse bg-slate-50">
+      <div class="section-image-container">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=2000" alt="Reception"
+          class="slant-right grayscale hover:grayscale-0 transition-all duration-700">
+      </div>
+      <div class="w-1/2 section-content flex flex-col justify-center px-12 md:px-24 text-right items-end">
+        <i data-lucide="cake" class="mb-6 opacity-20" size="40" stroke-width="1"></i>
+        <h2 class="text-5xl mb-6">Kirke</h2>
+        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
+          Vielsen finder sted i den smukke landsbykirke. Vi glæder os til at dele dette øjeblik med jer.
+        </p>
+        <p class="mt-4 text-slate-400 font-light italic">Kl. 15:30</p>
+      </div>
+    </section>
+
+    <section id="reception" class="full-section flex flex-row">
+      <div class="section-image-container">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000" alt="Reception"
+          class="slant-left grayscale hover:grayscale-0 transition-all duration-700">
+      </div>
+      <div class="w-1/2 section-content flex flex-col justify-center px-12 md:px-24">
+        <i data-lucide="cake" class="mb-6 opacity-20" size="48"></i>
+        <h2 class="text-5xl mb-6">Reception</h2>
+        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
+          Vi byder på bobler og kage i den gamle herregårdshave umiddelbart efter vielsen.
+        </p>
+      </div>
+    </section>
+
+    <section id="dinner" class="full-section flex flex-row">
+      <div class="section-image-container">
+        <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?q=80&w=2000" alt="Middag"
+          class="slant-left-inv grayscale hover:grayscale-0 transition-all duration-700">
+      </div>
+      <div class="w-1/2 section-content flex flex-col justify-center px-12 md:px-24">
+        <i data-lucide="utensils" class="mb-6 opacity-20" size="40" stroke-width="1"></i>
+        <h2 class="text-5xl mb-6 font-cursive">Middag</h2>
+        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
+          En nøje sammensat tre-retters menu serveres i festsalen. Vi glæder os til en aften med god mad og kærlige
+          taler.
+        </p>
+        <p class="mt-4 text-slate-400 font-light italic">Kl. 18:00</p>
+      </div>
+    </section>
+
+    <section id="party" class="full-section flex flex-row-reverse bg-slate-50">
+      <div class="section-image-container">
+        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2000" alt="Fest"
+          class="slant-right-inv grayscale hover:grayscale-0 transition-all duration-700">
+      </div>
+      <div class="w-1/2 section-content flex flex-col justify-center px-12 md:px-24 text-right items-end">
+        <i data-lucide="music" class="mb-6 opacity-20" size="40" stroke-width="1"></i>
+        <h2 class="text-5xl mb-6 font-cursive">Festen</h2>
+        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
+          Når middagen er slut, åbner baren og DJ'en tager over. Vi danser natten lang!
+        </p>
+        <p class="mt-4 text-slate-400 font-light italic">Hele natten</p>
+      </div>
+    </section>
+
   </main>
-  <footer>
-    Test.
+
+  <footer class="vibe-footer bg-[#1a1a1a] text-white/80">
+    <div class="footer-content">
+      <p class="hearts font-cursive">C&amp;N</p>
+      <p class="attribution">Vibe-coded like a true professional</p>
+    </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    lucide.createIcons();
+
+const nav = document.querySelector('.nav-island');
+const footer = document.querySelector('.vibe-footer');
+
+function updateNavPosition() {
+    if (window.innerWidth < 768) {
+        // Get the top of the footer relative to the viewport
+        const footerRect = footer.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        // How many pixels of the footer are currently visible?
+        const footerVisibleHeight = Math.max(0, viewportHeight - footerRect.top);
+
+        if (footerVisibleHeight > 0) {
+            // The 24px (1.5rem) is our starting bottom margin.
+            // We add the visible footer height to "push" it up.
+            nav.style.bottom = `${24 + footerVisibleHeight}px`;
+        } else {
+            nav.style.bottom = `1.5rem`;
+        }
+    } else {
+        // Reset for desktop
+        nav.style.bottom = '';
+    }
+    // Keeps the loop running at 60-120fps
+    requestAnimationFrame(updateNavPosition);
+}
+
+// Start the loop
+requestAnimationFrame(updateNavPosition);
+  </script>
 </body>
 
 </html>

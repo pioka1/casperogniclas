@@ -1,0 +1,200 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-cursive {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.hero-image {
+  background-image: url('assets/header.png');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(0.7);
+  height: 100dvh;
+  width: 100%;
+}
+
+/* Floating Menu "The Island" */
+.nav-island {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  /* Margin on sides */
+  max-width: 500px;
+  /* Slimmer look */
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  /* Super rounded Apple look */
+  z-index: 100;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile: Floating at the bottom */
+@media (max-width: 767px) {
+  .nav-island {
+    bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    max-width: 300px
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  /* Only icons on mobile */
+}
+
+/* Desktop: Floating at the top */
+@media (min-width: 768px) {
+  .nav-island {
+    top: 1.5rem;
+    padding: 0.6rem 2rem;
+    max-width: 700px;
+    /* Wider for text on desktop */
+  }
+
+  .nav-text {
+    display: inline;
+  }
+}
+
+/* Update these specific classes in style.css */
+
+.full-section {
+  height: 100vh;
+  /* Force exact viewport height */
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+  /* Remove any default padding */
+}
+
+.section-image-container {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.section-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures image fills the area without distortion */
+}
+
+/* The Slant Effect - updated for better coverage */
+.slant-left {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.slant-right {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* New Inverse Slants (Counter-Clockwise) */
+/* This cuts the bottom-left or top-left to flip the angle */
+.slant-left-inv {
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+
+.slant-right-inv {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+}
+
+/* Mobile: Always remove clips for clean stacking */
+@media (max-width: 767px) {
+
+  .slant-left,
+  .slant-right,
+  .slant-left-inv,
+  .slant-right-inv {
+    clip-path: none !important;
+  }
+}
+
+/* Update this specific block in your style.css */
+@media (max-width: 767px) {
+  .full-section {
+    height: 100vh;
+    flex-direction: column !important;
+    display: flex !important;
+  }
+
+  /* Ensure every image container is exactly 50% height */
+  .section-image-container,
+  .full-section>div:first-child {
+    width: 100% !important;
+    height: 50vh !important;
+  }
+
+  .section-content {
+    width: 100% !important;
+    height: 50vh !important;
+    padding: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    /* Forced centering to override Tailwind desktop classes */
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .slant-left,
+  .slant-right,
+  .slant-left-inv,
+  .slant-right-inv {
+    clip-path: none !important;
+  }
+}
+
+/* Update/Replace your vibe-footer styles in style.css */
+/* 1. Remove the margin from the footer */
+.vibe-footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0 !important; /* Force remove the margin */
+}
+
+@media (max-width: 767px) {
+    .nav-island {
+        bottom: 1.5rem; /* Base position */
+        /* Remove any previous animation-timeline or transitions */
+        animation: none;
+        transition: none; 
+    }
+}
+
+.footer-content .hearts {
+  font-size: 30px;
+  letter-spacing: 0.15em;
+  /* This makes the white "white-ish" and softer */
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 6px;
+}
+
+.footer-content .attribution {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  /* Lower opacity for the tagline */
+}
