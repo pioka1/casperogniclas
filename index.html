@@ -14,7 +14,7 @@
 
   <nav class="nav-island flex justify-around md:justify-between items-center shadow-2xl">
     <a href="#" class="hover:opacity-50">
-      <span class="whitespace-nowrap font-cursive text-md md:text-xl mr-2 md:mr-4">C & N</span>
+      <span class="whitespace-nowrap font-cursive text-md md:text-xl mr-2 md:mr-4 text-black">C & N</span>
     </a>
 
     <div class="relative flex justify-around w-full md:w-auto md:gap-8 items-center">
@@ -40,9 +40,9 @@
 
   <section id="home" class="relative overflow-hidden">
     <div class="hero-image flex items-center justify-center">
-      <div class="text-center text-white p-6">
-        <h1 class="text-5xl md:text-8xl mb-4">Casper & Niclas' Bryllup</h1>
-        <p class="uppercase tracking-[0.4em] text-sm opacity-80 italic">15. August 2026</p>
+      <div class="text-center p-6">
+        <h1 class="hero-image-text text-5xl md:text-8xl mb-4">Casper & Niclas' Bryllup</h1>
+        <p class="uppercase tracking-[0.4em] text-sm opacity-80 italic text-white">15. August 2026</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,7 @@
 
   <footer class="vibe-footer bg-[#1a1a1a] text-white/80">
     <div class="footer-content">
-      <p class="hearts font-cursive">C&amp;N</p>
+      <p class="hearts font-cursive">C&N</p>
       <p class="attribution">Vibe-coded like a true professional</p>
     </div>
   </footer>
@@ -121,11 +121,11 @@
   <script>
     lucide.createIcons();
 
-const nav = document.querySelector('.nav-island');
-const footer = document.querySelector('.vibe-footer');
+    const nav = document.querySelector('.nav-island');
+    const footer = document.querySelector('.vibe-footer');
 
-function updateNavPosition() {
-    if (window.innerWidth < 768) {
+    function updateNavPosition() {
+      if (window.innerWidth < 768) {
         // Get the top of the footer relative to the viewport
         const footerRect = footer.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
@@ -134,22 +134,22 @@ function updateNavPosition() {
         const footerVisibleHeight = Math.max(0, viewportHeight - footerRect.top);
 
         if (footerVisibleHeight > 0) {
-            // The 24px (1.5rem) is our starting bottom margin.
-            // We add the visible footer height to "push" it up.
-            nav.style.bottom = `${24 + footerVisibleHeight}px`;
+          // The 24px (1.5rem) is our starting bottom margin.
+          // We add the visible footer height to "push" it up.
+          nav.style.bottom = `${24 + footerVisibleHeight}px`;
         } else {
-            nav.style.bottom = `1.5rem`;
+          nav.style.bottom = `1.5rem`;
         }
-    } else {
+      } else {
         // Reset for desktop
         nav.style.bottom = '';
+      }
+      // Keeps the loop running at 60-120fps
+      requestAnimationFrame(updateNavPosition);
     }
-    // Keeps the loop running at 60-120fps
-    requestAnimationFrame(updateNavPosition);
-}
 
-// Start the loop
-requestAnimationFrame(updateNavPosition);
+    // Start the loop
+    requestAnimationFrame(updateNavPosition);
   </script>
   <script src="script.js"></script>
 </body>
