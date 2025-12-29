@@ -8,6 +8,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-white text-slate-900">
@@ -21,7 +24,7 @@
       <div id="nav-pill" class="absolute bg-blue-500 rounded-full" style="transition: all 0.4s ease-in-out;"></div>
       <a href="#church" class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
         <i data-lucide="church" size="20"></i>
-        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Kirke</span>
+        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Vielse</span>
       </a>
       <a href="#reception" class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
         <i data-lucide="cake" size="20"></i>
@@ -35,6 +38,10 @@
         <i data-lucide="music" size="20"></i>
         <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Fest</span>
       </a>
+      <a href="#morning" class="nav-link flex flex-col md:flex-row items-center gap-1 md:gap-2 hover:opacity-50">
+        <i data-lucide="waves" size="20"></i>
+        <span class="nav-text text-[10px] md:text-xs uppercase tracking-widest font-bold">Dagen derpå</span>
+      </a>
     </div>
   </nav>
 
@@ -42,7 +49,10 @@
     <div class="hero-image flex items-center justify-center">
       <div class="text-center">
         <h1 class="hero-image-text leading-relaxed md:leading-normal text-5xl md:text-8xl mb-4">Casper & Niclas' Bryllup</h1>
-        <p class="uppercase tracking-[0.4em] text-sm opacity-80 italic text-white">15. August 2026</p>
+        <p class="hero-image-date uppercase tracking-[0.4em] mt-8 md:mt-12 opacity-80 italic text-white">15. August 2026</p>
+        <p class="mt-24 text-white text-3xl max-w-5xl">
+          Vi skal giftes og glæder os til en stor fejring sammen med dig/jer!
+        </p>
       </div>
     </div>
   </section>
@@ -57,12 +67,16 @@
       <div class="w-1/2 section-content flex flex-col justify-center px-12 md:px-24 text-right items-end">
         <div class="section-header mb-10">
           <i data-lucide="church" size="60" stroke-width="1"></i>
-          <h2 class="text-6xl">Kirke</h2>
+          <h2 class="text-6xl">Vielse</h2>
         </div>
-        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
-          Vielsen finder sted i den smukke landsbykirke. Vi glæder os til at dele dette øjeblik med jer.
+        <p class="mb-4 text-2xl text-slate-400 font-light italic">Kl. 12:00</p>
+        <p class="text-slate-500 leading-relaxed text-xl max-w-xl">
+          Vielsen finder sted i Hørsholm Kirke hvor Niclas både er døbt og konfirmeret. Mød gerne op 30 minutter før ceremonien starter så i har mulighed for at hilse på hinanden. Der er en parkingsplads med gratis parkering i 4 timer på den nordlige side af kirken (se kortet).
+          <br class="block my-2" />
+          Efter ceremonien vil brudeparret som de sidste gå ud fra kirkeporten, hvor alle gæster kan blæse med sæbebobler, før brudeparret forlader kirken i stil for at tage billeder med fotografen.
+          <br class="block my-2" />
+          Der vil være en shuttlebus for gæster uden egen transportmiddel. Kontakt os hvis i ønsker jer en plads i bussen. Der er nu god tid til at komme sig godt frem og få checket ind på hotellet før receptionen starter.
         </p>
-        <p class="mt-4 text-slate-400 font-light italic">Kl. 15:30</p>
       </div>
     </section>
 
@@ -76,8 +90,15 @@
           <h2 class="text-6xl">Reception</h2>
           <i data-lucide="cake" size="60" stroke-width="1"></i>
         </div>
-        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
-          Vi byder på bobler og kage i den gamle herregårdshave umiddelbart efter vielsen.
+        <p class="mb-4 text-2xl text-slate-400 font-light italic">Kl. 15:00</p>
+        <p class="text-slate-500 leading-relaxed text-xl max-w-xl">
+          Resten af dagens arrangement finder sted på det skønne Kurhotel Skodsborg, hvor vi starter med en reception på tagterrassen i det (forhåbentligvis) gode vejr med bobler, kaffe, og kage.
+          <br class="block my-2" />
+          Kurhotel Skodsborg ligger 10 minutters gang fra Skodsborg Station. Togene kører én gang i timen hele natten, og der er derfor rig mulighed for at komme hjem hvis man ikke ønsker at overnatte på hotellet.
+          <br class="block my-2" />
+          Alle langvejsrejsende gæster (Norge/Aalborg) har fået pre-reserveret værelser. Alle andre gæster bedes selv reservere et værelse såfremt man ønsker at overnatte.
+          <br class="block my-2" />
+          Husk solbriller og solkrem!
         </p>
       </div>
     </section>
@@ -92,11 +113,10 @@
           <h2 class="text-6xl font-cursive">Middag</h2>
           <i data-lucide="utensils" size="60" stroke-width="1"></i>
         </div>
-        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
-          En nøje sammensat tre-retters menu serveres i festsalen. Vi glæder os til en aften med god mad og kærlige
-          taler.
+        <p class="mb-4 text-2xl text-slate-400 font-light italic">Kl. 18:00</p>
+        <p class="text-slate-500 leading-relaxed text-xl max-w-xl">
+          Dagen fortsætter efterfølgende med treretters menu inde i festsalen med gode taler og vin/øl ad libitum.
         </p>
-        <p class="mt-4 text-slate-400 font-light italic">Kl. 18:00</p>
       </div>
     </section>
 
@@ -110,10 +130,31 @@
           <i data-lucide="music" size="60" stroke-width="1"></i>
           <h2 class="text-6xl font-cursive">Festen</h2>
         </div>
-        <p class="text-slate-500 leading-relaxed text-lg max-w-md">
-          Når middagen er slut, åbner baren og DJ'en tager over. Vi danser natten lang!
+        <p class="mb-4 text-2xl text-slate-400 font-light italic">Kl. 22:00 - 02:00</p>
+        <p class="text-slate-500 leading-relaxed text-xl max-w-xl">
+          Når vi alle er mætte og glade åbner vi op for dansegulvet hvor DJ'en stiller op med de bedste EDM/Pop BANGERS i moderne tid.
+          <br class="block my-2" />
+          Når benene simpelthen ikke længere klarer at fortsætte, kravler man sig blot tilbage til hotelværelset, eller går de små 10 minutter til togstationen.
         </p>
-        <p class="mt-4 text-slate-400 font-light italic">Hele natten</p>
+      </div>
+    </section>
+
+    <section id="morning" class="full-section flex flex-row-reverse bg-slate-50">
+      <div class="section-image-container">
+        <img src="assets/spa_1.jpg" alt="Spa"
+          class="slant-right transition-all duration-700">
+      </div>
+      <div class="w-1/2 section-content flex flex-col justify-center px-12 md:px-24 text-right items-end">
+        <div class="section-header mb-10">
+          <i data-lucide="waves" size="60" stroke-width="1"></i>
+          <h2 class="text-6xl">Dagen derpå</h2>
+        </div>
+        <p class="mb-4 text-2xl text-slate-400 font-light italic">Kl. 07:30 - 10:30</p>
+        <p class="text-slate-500 leading-relaxed text-xl max-w-xl">
+          Efter en pragtfuld dag og en festlig nat, har vi alle brug for at komme ovenpå igen. Inkluderet i prisen får alle overnattende gæster både morgenmad og adgang til Spa & Fitness faciliteterne.
+          <br class="block my-2" />
+          Vi har reserveret et privat lokale til morgenmaden, hvor vi også vil åbne jeres gaver. Nyd resten af dagen med spa og afslapning.
+        </p>
       </div>
     </section>
 
@@ -122,7 +163,7 @@
   <section id="cya" class="relative overflow-hidden">
     <div class="cya-image flex items-center justify-center">
       <div class="text-center">
-        <h1 class="cya-image-text leading-relaxed md:leading-normal text-5xl md:text-8xl mb-4">Vi glæder os så meget til at se jer!</h1>
+        <h1 class="cya-image-text leading-relaxed md:leading-normal text-5xl md:text-8xl mb-4">Vi glaeder os så meget til at se jer!</h1>
       </div>
     </div>
   </section>
