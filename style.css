@@ -277,3 +277,27 @@ h3 {
   width: 60px;
   height: 60px;
 }
+
+
+.cya-image {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+}
+.cya-image-text {
+  color: #fff;
+}
+
+.cya-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('assets/spa_1.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(0.7);
+  z-index: -1;
+}
