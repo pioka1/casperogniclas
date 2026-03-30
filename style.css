@@ -333,3 +333,71 @@ h3 {
   filter: grayscale(20%) brightness(0.7);
   z-index: -1;
 }
+
+/* Vips Section Styling */
+.vips-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Gap between cards on mobile */
+}
+
+.vip-card {
+  position: relative;
+  overflow: hidden;
+  height: 450px; /* Fixed height for mobile */
+}
+
+.vip-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vip-description {
+  position: absolute;
+  inset-x: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Darkened box for text */
+  color: white;
+  padding: 1rem;
+  transition: transform 0.3s ease-out; /* For desktop hover effect */
+  text-align: center;
+}
+
+.vip-description h3 {
+  font-family: "Crimson Text", serif;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.vip-description p {
+  font-family: "Crimson Text", serif;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+
+/* Desktop styles (md and above) */
+@media (min-width: 768px) {
+  .vips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* Gap between cards on desktop */
+  }
+
+  .vip-card {
+    height: auto; /* Allow height to adjust */
+    max-height: 100dvh; /* Max height for desktop */
+  }
+
+  .vip-description {
+    transform: translateY(100%); /* Hide description below image */
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on desktop */
+  }
+
+  .vip-card:hover .vip-description {
+    transform: translateY(0); /* Reveal description on hover */
+  }
+}
